@@ -3,6 +3,10 @@ class MessagesController < ApplicationController
     @message = Message.new
     @room = Room.find(params[:room_id])
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    @messages = @room.messages.includes(:user)
+>>>>>>> 29b34bbd07255a58ae195cf0e2bfd2fa51327a48
   end
 
   def create
@@ -15,6 +19,7 @@ class MessagesController < ApplicationController
     end
   end
 
+<<<<<<< HEAD
   private
 
   def message_params
@@ -34,6 +39,8 @@ class MessagesController < ApplicationController
     end
   end
 
+=======
+>>>>>>> 29b34bbd07255a58ae195cf0e2bfd2fa51327a48
 
   private
 
