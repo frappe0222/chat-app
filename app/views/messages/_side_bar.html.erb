@@ -1,5 +1,5 @@
 <div class="side-bar-header">
-　<div class="header-name">
+<div class="header-name">
      <%= link_to edit_user_path(current_user) do %>
       <%= current_user.name %>
      <% end %>
@@ -13,7 +13,7 @@
   <% current_user.rooms.each do |room| %>
     <div class="room">
       <div class="room-name">
-        <a href="#"><%= room.name%></a>
+        <%= link_to room.name, room_messages_path(room) %>
       </div>
     </div>
   <% end %>
